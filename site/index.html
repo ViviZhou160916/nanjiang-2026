@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 南疆之旅 · 行程路线总览</title>
+<meta name="description" content="2026.9.27—10.6 喀什往返自驾南线：帕米尔高原 + 莎车非遗 + N39 沙漠星空，10 天 9 晚约 1200km。">
+<style>
+:root{
+  --bg:#FAF9F7; --card:#FFFFFF; --border:#E8E4DE; --border-2:#D6D0C8;
+  --text:#1C1917; --text-2:#57534E; --text-3:#8A817A;
+  --primary:#C2410C; --primary-deep:#9A3412; --primary-soft:#FDF1E9;
+  --blue:#1D4ED8; --blue-soft:#EFF4FE;
+  --green:#15803D; --green-soft:#F0FDF4;
+  --red:#B91C1C; --red-soft:#FEF2F2;
+  --r:12px; --r-lg:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:15px; line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+.serif{font-family:"Songti SC","STSong","Noto Serif SC","SimSun",serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* ── 顶部导航 ───────────────────────── */
+.nav{border-bottom:1px solid var(--border);background:rgba(250,249,247,.92);backdrop-filter:blur(8px);position:sticky;top:0;z-index:50}
+.nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{font-weight:700;font-size:16px;letter-spacing:.02em}
+.nav-brand em{color:var(--primary);font-style:normal}
+.nav-links{display:flex;gap:8px}
+.nav-links a{color:var(--text-2);text-decoration:none;font-size:14px;padding:8px 16px;border-radius:8px;transition:all .15s ease-out}
+.nav-links a:hover{color:var(--text);background:#F1EEE9}
+.nav-links a.active{color:var(--primary);font-weight:600}
+
+/* ── Hero ───────────────────────── */
+.hero{padding:80px 0 48px;text-align:center}
+.hero .kicker{color:var(--primary);font-weight:600;font-size:14px;letter-spacing:.24em;margin-bottom:16px}
+.hero h1{font-size:48px;line-height:1.2;font-weight:700;letter-spacing:.04em}
+.hero h1 span{color:var(--primary)}
+.hero .sub{color:var(--text-2);font-size:16px;margin-top:16px}
+.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:40px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px 32px;min-width:128px}
+.stat b{display:block;font-size:24px;font-weight:700;letter-spacing:.02em}
+.stat small{color:var(--text-3);font-size:12.5px}
+
+/* ── 路线流向条 ───────────────────────── */
+.flow-sec{padding:8px 0 56px}
+.flow{display:flex;align-items:stretch;justify-content:center;flex-wrap:wrap;gap:0}
+.flow-node{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px 24px;text-align:center;min-width:144px}
+.flow-node b{display:block;font-size:17px;font-weight:700}
+.flow-node small{color:var(--text-3);font-size:12.5px;display:block;margin-top:4px}
+.flow-node .nights{display:inline-block;margin-top:8px;font-size:12px;color:var(--primary);background:var(--primary-soft);border-radius:99px;padding:2px 12px;font-weight:600}
+.flow-node.hl{border-color:var(--primary);box-shadow:0 0 0 1px var(--primary) inset}
+.flow-arrow{display:flex;align-items:center;padding:0 12px;color:var(--text-3);font-size:13px;white-space:nowrap}
+.flow-arrow i{font-style:normal;margin-left:8px;color:var(--text-3);font-size:12px}
+
+/* ── 章节 ───────────────────────── */
+.section{padding:56px 0}
+.section-head{display:flex;align-items:baseline;gap:16px;margin-bottom:32px}
+.section-head h2{font-size:28px;font-weight:700;letter-spacing:.04em}
+.section-head .line{flex:1;height:1px;background:var(--border-2)}
+.section-head .no{color:var(--text-3);font-size:14px;font-family:Georgia,serif}
+
+/* ── 时间线 ───────────────────────── */
+.timeline{position:relative}
+.timeline::before{content:"";position:absolute;left:31px;top:8px;bottom:8px;width:2px;background:var(--border-2)}
+.day{display:grid;grid-template-columns:64px 1fr;gap:24px;margin-bottom:24px;position:relative}
+.day-dot{width:64px;height:64px;border-radius:50%;background:var(--card);border:2px solid var(--border-2);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;position:relative;z-index:1}
+.day-dot b{font-size:16px;line-height:1.1}
+.day-dot small{font-size:10.5px;color:var(--text-3);font-weight:500}
+.day.peak .day-dot{border-color:var(--primary);color:var(--primary)}
+.day-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px 32px;transition:box-shadow .15s ease-out}
+.day-card:hover{box-shadow:0 8px 24px rgba(28,25,23,.06)}
+.day-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px}
+.day-head h3{font-size:19px;font-weight:700;letter-spacing:.02em}
+.day-head .date{color:var(--text-3);font-size:13.5px}
+.badge{display:inline-block;font-size:12px;font-weight:600;border-radius:99px;padding:2px 12px}
+.badge.km{color:var(--blue);background:var(--blue-soft)}
+.badge.star{color:var(--primary);background:var(--primary-soft)}
+.badge.stay{color:var(--green);background:var(--green-soft)}
+.day-card ul{list-style:none;margin-top:12px}
+.day-card li{padding-left:20px;position:relative;color:var(--text-2);font-size:14.5px;margin-top:6px}
+.day-card li::before{content:"";position:absolute;left:4px;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--border-2)}
+.day-card li b{color:var(--text);font-weight:600}
+.day-foot{margin-top:16px;padding-top:12px;border-top:1px dashed var(--border);display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--text-3)}
+.planb{margin-top:12px;background:var(--green-soft);border:1px solid #DCFCE7;border-radius:var(--r);padding:12px 16px;font-size:13.5px;color:#166534}
+.planb b{color:var(--green)}
+
+/* ── 双栏面板 / 表格 ───────────────────────── */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:32px}
+.panel h3{font-size:18px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.panel h3 .dot{width:8px;height:8px;border-radius:50%;background:var(--primary)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;color:var(--text-3);font-weight:600;font-size:12.5px;letter-spacing:.08em;padding:8px 12px;border-bottom:1px solid var(--border-2)}
+td{padding:12px;border-bottom:1px solid var(--border);color:var(--text-2);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td b{color:var(--text)}
+
+/* ── 提示卡 ───────────────────────── */
+.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tip{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px}
+.tip h4{font-size:15px;font-weight:700;margin-bottom:8px;display:flex;gap:8px;align-items:center}
+.tip p{color:var(--text-2);font-size:13.5px}
+.tip .ico{width:32px;height:32px;border-radius:8px;background:var(--primary-soft);color:var(--primary);display:inline-flex;align-items:center;justify-content:center;font-size:16px;margin-bottom:8px}
+
+/* ── 方案对比 ───────────────────────── */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.vs .panel.win{border-color:var(--primary);box-shadow:0 0 0 1px var(--primary)}
+.tagline{display:inline-block;font-size:12px;font-weight:600;border-radius:6px;padding:2px 8px;margin-bottom:12px}
+.tagline.rec{color:var(--primary);background:var(--primary-soft)}
+.tagline.alt{color:var(--text-3);background:#F1EEE9}
+.vs ul{list-style:none}
+.vs li{padding-left:20px;position:relative;color:var(--text-2);font-size:14px;margin-top:6px}
+.vs li::before{content:"+";position:absolute;left:2px;color:var(--primary);font-weight:700}
+
+footer{border-top:1px solid var(--border);margin-top:56px;padding:32px 0 48px;color:var(--text-3);font-size:13px;text-align:center}
+footer a{color:var(--text-2)}
+
+@media (max-width:880px){
+  .hero h1{font-size:34px}
+  .cols,.tips,.vs{grid-template-columns:1fr}
+  .day{grid-template-columns:48px 1fr;gap:16px}
+  .day-dot{width:48px;height:48px}
+  .timeline::before{left:23px}
+  .stats{gap:8px}.stat{padding:12px 20px;min-width:104px}
+  .flow-arrow{width:100%;justify-content:center;padding:8px 0}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-inner">
+  <div class="nav-brand serif">2026<em>南疆之旅</em></div>
+  <div class="nav-links">
+    <a class="active" href="./index.html">行程路线</a>
+    <a href="./xhs.html">小红书笔记总结</a>
+  </div>
+</div></nav>
+
+<header class="hero wrap">
+  <div class="kicker">KASHGAR · PAMIR · TAKLAMAKAN</div>
+  <h1 class="serif">一半人文，一半山河<span>。</span></h1>
+  <p class="sub">喀什往返自驾南线 · 帕米尔高原 + 莎车非遗 + N39 沙漠星空</p>
+  <div class="stats">
+    <div class="stat"><b>10 天</b><small>9/27 — 10/6</small></div>
+    <div class="stat"><b>1200 km</b><small>5 个车日自驾</small></div>
+    <div class="stat"><b>3100 m</b><small>塔县 · 全程最高</small></div>
+    <div class="stat"><b>9 晚</b><small>喀什 6 · 塔县 1 · 莎车 1 · 沙漠 1</small></div>
+  </div>
+</header>
+
+<section class="flow-sec wrap">
+  <div class="flow">
+    <div class="flow-node hl"><b>喀什古城</b><small>人文 · 美食 · 机位</small><span class="nights">宿 6 晚</span></div>
+    <div class="flow-arrow">→<i>290km · G314</i></div>
+    <div class="flow-node"><b>塔县 · 帕米尔</b><small>白沙湖 · 慕士塔格</small><span class="nights">宿 1 晚</span></div>
+    <div class="flow-arrow">→<i>410km · 盘龙古道</i></div>
+    <div class="flow-node"><b>莎车</b><small>木卡姆 · 巴旦木</small><span class="nights">宿 1 晚</span></div>
+    <div class="flow-arrow">→<i>150km</i></div>
+    <div class="flow-node"><b>N39 沙漠</b><small>星空营地 · 冲沙</small><span class="nights">宿 1 晚</span></div>
+    <div class="flow-arrow">→<i>200km</i></div>
+    <div class="flow-node"><b>喀什</b><small>大巴扎 · 返程</small><span class="nights">收尾</span></div>
+  </div>
+</section>
+
+<section class="section wrap" id="days">
+  <div class="section-head"><span class="no">01</span><h2 class="serif">每日路线</h2><div class="line"></div></div>
+  <div class="timeline">
+
+    <div class="day">
+      <div class="day-dot"><b>D1</b><small>9/27 日</small></div>
+      <div class="day-card">
+        <div class="day-head"><h3>各地 → 喀什 · 古城黄昏</h3><span class="date">落地 16:30 入住古城东门</span></div>
+        <ul>
+          <li><b>百年老茶馆</b>喝药茶看本地人跳舞，抢二楼窗边位</li>
+          <li>古城夜市第一轮：烤蛋、缸子肉、鸽子汤、酸奶刨冰</li>
+          <li>✈️ 去程选<b>左侧 A/L 靠窗</b>，落地前半小时雪山连绵（319 优先 42—44 排）</li>
+        </ul>
+        <div class="day-foot"><span class="badge stay">宿 喀什古城 1290m</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-dot"><b>D2</b><small>9/28 一</small></div>
+      <div class="day-card">
+        <div class="day-head"><h3>喀什古城全天（步行日）</h3><span class="date">反向错峰：西区先拍 → 东区后逛</span></div>
+        <ul>
+          <li>10:00 东门<b>开城仪式</b>（马路对面视角更正；嫌挤可看直播睡懒觉）</li>
+          <li>西区机位：<b>彩虹巷、布袋巷</b>相邻必打卡；旅拍西区性价比更高</li>
+          <li>机位加餐：耿公祠高处全景 / 「那时慢民宿」昆仑塔 / <b>丽呈酒店电梯 10—11 楼</b> / Atlas Farmer 3 楼露台（免费）</li>
+          <li><b>布料市场下单定制衣</b>：7—10 天工期，今天下单 D9 取刚好（3 米布 45 元 + 手工 140 元）</li>
+          <li>傍晚取车验车；夜市第二轮 + 老汉瓜（10 元 3 个）</li>
+        </ul>
+        <div class="day-foot"><span class="badge stay">宿 喀什古城</span><span>备好边防证 + 氧气瓶</span></div>
+      </div>
+    </div>
+
+    <div class="day peak">
+      <div class="day-dot"><b>D3</b><small>9/29 二</small></div>
+      <div class="day-card">
+        <div class="day-head"><h3>喀什 → 中巴友谊公路 → 塔县</h3><span class="badge km">290km · 6h</span><span class="badge star">全程精华日</span></div>
+        <ul>
+          <li>奥依塔克<b>红山谷</b>：红色砂岩褶皱，快拍 40 分钟</li>
+          <li><b>白沙湖</b>：北岸免费人少、俯瞰视角；南岸收费可拍牦牛；<b>上午风小最出片</b>，下午起风浪大</li>
+          <li><b>喀拉库勒湖</b>：慕士塔格峰（7546m 冰山之父）与公格尔峰同框倒影</li>
+          <li>抵达塔县：<b>石头城 + 金草滩日落</b>（约 19:50，湿地金黄）</li>
+          <li>晚餐：古老戈壁餐厅烤串/大盘鸡（出餐慢约 40 分钟，提前点）</li>
+        </ul>
+        <div class="day-foot">
+          <span class="badge stay">宿 塔县 3100m</span>
+          <span>★ 9/15—30 黄金窗口尾巴：金草滩全黄 + 慕士塔格初雪</span>
+          <span>次日早 6—8 点银河窗口</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-dot"><b>D4</b><small>9/30 三</small></div>
+      <div class="day-card">
+        <div class="day-head"><h3>塔县 → 盘龙古道 → 返喀什</h3><span class="badge km">410km · 7h 最长车日</span></div>
+        <ul>
+          <li><b>班迪尔蓝湖</b>（帕米尔"蓝眼泪"；部分施工搓板路，慢开）</li>
+          <li><b>盘龙古道</b> 600 余道弯：大盘龙看气势、小盘龙出片；注意单双日/方向管制</li>
+          <li>返程途停<b>塔合曼湿地</b>（深秋染金）+ 树洞公路（乡道深处有无人版）</li>
+        </ul>
+        <div class="planb"><b>Plan B 晕车/封路替代线：</b>放弃盘龙，改访<b>托格伦夏村</b>（塔县对面山脚 20 分钟，免门票）——塔吉克村庄 · 湿地牧场 · 白色小桥流水机位 · 可家访；路线 塔县 → 托格伦夏 → 塔合曼 → 喀什，全程平路。</div>
+        <div class="day-foot"><span class="badge stay">宿 喀什古城 1290m</span><span>今晚睡低海拔，好好洗澡</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-dot"><b>D5</b><small>10/1 四</small></div>
+      <div class="day-card">
+        <div class="day-head"><h3>喀什 → 莎车 · 木卡姆之乡</h3><span class="badge km">190km · 2.5h</span></div>
+        <ul>
+          <li>午餐<b>莎车鸽子汤</b> + 烤包子</li>
+          <li><b>叶尔羌汗王陵 + 阿曼尼莎汗纪念陵</b>（联票 30—45 元）</li>
+          <li><b>非遗博览园</b>看十二木卡姆展演；老城巴扎比喀什更原生态</li>
+          <li>巴旦木原产地直购，比喀什便宜</li>
+        </ul>
+        <div class="day-foot"><span class="badge stay">宿 莎车县城 1230m</span><span>民风更传统，拍照先征询</span></div>
+      </div>
+    </div>
+
+    <div class="day peak">
+      <div class="day-dot"><b>D6</b><small>10/2 五</small></div>
+      <div class="day-card">
+        <div class="day-head"><h3>莎车 → 麦盖提 N39 沙漠</h3><span class="badge km">150km · 2.5h</span><span class="badge star">星空营地</span></div>
+        <ul>
+          <li>午餐<b>刀郎烤鱼</b>（麦盖提特色）</li>
+          <li>营地入住（星空球/太空舱）；自驾可跟营地引导车进入（提前电话确认）</li>
+          <li><b>冲沙越野 · 滑沙 · 骑骆驼</b>（人均 100—300 元）；日落约 19:50 金色时刻</li>
+          <li>篝火 + 观星：光污染极低，<b>银河肉眼可见</b>，手机夜景模式可出片</li>
+        </ul>
+        <div class="day-foot"><span class="badge stay">宿 N39 星空营地 1170m</span><span>昼夜温差大，日落前加外套</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-dot"><b>D7</b><small>10/3 六</small></div>
+      <div class="day-card">
+        <div class="day-head"><h3>沙漠日出 → 返喀什 · 晚还车</h3><span class="badge km">200km · 3h</span></div>
+        <ul>
+          <li>07:50 占位沙丘看<b>日出</b>（约 08:10，沙脊线光影绝佳）</li>
+          <li>15:00 <b>晚还车</b>：加满油、清车内、拍照留证（省 1—2 日租金）</li>
+          <li>古城咖啡/茶馆，慢下来的下午</li>
+        </ul>
+        <div class="day-foot"><span class="badge stay">宿 喀什古城</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-dot"><b>D8</b><small>10/4 日</small></div>
+      <div class="day-card">
+        <div class="day-head"><h3>周日牛羊大巴扎 + 香妃园</h3><span class="badge star">仅周日有</span></div>
+        <ul>
+          <li><b>荒地乡牛羊大巴扎</b>：看刀郎羊（垂耳兔耳朵）、赶早最热闹、<b>戴口罩</b>、干果便宜</li>
+          <li><b>香妃园</b>（网购 38 元）：精华主墓殿"小泰姬陵"+ 高低寺，蹭团讲解</li>
+          <li>（可选）骑仕大观园维吾尔婚礼围观（提前电话确认，常见 16:00 场）</li>
+        </ul>
+        <div class="day-foot"><span class="badge stay">宿 喀什古城</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-dot"><b>D9</b><small>10/5 一</small></div>
+      <div class="day-card">
+        <div class="day-head"><h3>喀什自由日（缓冲 + 采购）</h3><span class="date">睡到自然醒</span></div>
+        <ul>
+          <li>高台民居/职人街补漏；<b>布料市场取定制衣</b>（不合身当场改）</li>
+          <li>手信：干果现场快递到家；英吉沙小刀只能邮寄不能上飞机</li>
+          <li>古城墙下看日落，屋顶餐厅收官</li>
+        </ul>
+        <div class="day-foot"><span class="badge stay">宿 喀什古城</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-dot"><b>D10</b><small>10/6 二</small></div>
+      <div class="day-card">
+        <div class="day-head"><h3>喀什 → 各地</h3><span class="date">预留 2h 到机场</span></div>
+        <ul>
+          <li>返程选<b>右侧 L 靠窗</b>——起飞后近距离看雪山群峰</li>
+          <li>直飞或经乌鲁木齐/西安/兰州中转</li>
+        </ul>
+        <div class="day-foot"><span>10/7 在家休整 · 10/8 上班</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section wrap" id="food">
+  <div class="section-head"><span class="no">02</span><h2 class="serif">美食任务清单</h2><div class="line"></div></div>
+  <div class="cols">
+    <div class="panel">
+      <h3><span class="dot"></span>打卡必吃</h3>
+      <table>
+        <tr><th>类别</th><th>必吃</th></tr>
+        <tr><td><b>烤制</b></td><td>烤包子、红柳烤肉、烤蛋（喀什夜市）、刀郎烤鱼（麦盖提）</td></tr>
+        <tr><td><b>主食</b></td><td>手抓饭、大盘鸡、拉条子、丁丁炒面</td></tr>
+        <tr><td><b>汤锅</b></td><td>缸子肉、莎车鸽子汤、牦牛肉火锅（塔县）</td></tr>
+        <tr><td><b>塔县专项</b></td><td>古老戈壁餐厅烤串、过油肉拌面、奶皮子酸奶+核桃馕、卡特拉玛、冷水狗鱼</td></tr>
+        <tr><td><b>水果</b></td><td>无花果、石榴（10 月正季）、伽师瓜、莎车巴旦木</td></tr>
+        <tr><td><b>饮品</b></td><td>药茶（百年老茶馆）、石榴汁、卡瓦斯、酸奶刨冰</td></tr>
+      </table>
+    </div>
+    <div class="panel">
+      <h3><span class="dot"></span>住宿与预订优先级</h3>
+      <table>
+        <tr><th>城市</th><th>晚数</th><th>建议</th></tr>
+        <tr><td><b>喀什</b></td><td>6</td><td>古城内民宿，东门附近优先（350—600）</td></tr>
+        <tr><td><b>塔县</b></td><td>1</td><td>全景星空 / 东寻文化 / 全季；抖音直播间常更便宜（250—450）</td></tr>
+        <tr><td><b>莎车</b></td><td>1</td><td>县城中心近非遗博览园（150—300）</td></tr>
+        <tr><td><b>N39 营地</b></td><td>1</td><td>星空球/太空舱优先（400—900）</td></tr>
+      </table>
+      <p style="margin-top:16px;font-size:13px;color:var(--text-3)">预订优先级：① N39 星空营地（约 45 间，极紧俏）→ ② 喀什民宿 6 晚连住 → ③ 塔县酒店 → ④ 租车 SUV → ⑤ 机票 → ⑥ 莎车酒店</p>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="tips">
+  <div class="section-head"><span class="no">03</span><h2 class="serif">三条最重要的贴士</h2><div class="line"></div></div>
+  <div class="tips">
+    <div class="tip">
+      <div class="ico">🪪</div>
+      <h4>边防证写两个地区</h4>
+      <p>前往地必须同时含<b>「喀什地区」+「克州地区」</b>——白沙湖、喀拉库勒湖、木吉实际在克州阿克陶县。12367 APP 在线办、实测秒批；人手一张，检查站逐一查验。</p>
+    </div>
+    <div class="tip">
+      <div class="ico">🏔️</div>
+      <h4>高原只住一晚</h4>
+      <p>塔县 3100m 前已在喀什适应 2 晚，风险低。上高原当天慢走多喝水、不饮酒不久浴；氧气瓶喀什买（20—30 元/瓶），红景天提前一周服。</p>
+    </div>
+    <div class="tip">
+      <div class="ico">🕐</div>
+      <h4>时差晚 2 小时</h4>
+      <p>全疆北京时间，实际作息晚 2h：日出约 08:00、日落约 20:00。景区 10 点开门，夜市 21 点进入高潮——10 点出发不晚，晚饭 21 点正常。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="planb">
+  <div class="section-head"><span class="no">04</span><h2 class="serif">备选方案 B · 库车东线</h2><div class="line"></div></div>
+  <div class="vs">
+    <div class="panel win">
+      <span class="tagline rec">主线 · 本方案</span>
+      <h3 style="margin-top:0">莎车非遗 + N39 沙漠星空</h3>
+      <ul>
+        <li>最长车日仅 410km，节奏从容</li>
+        <li>十二木卡姆 + 巴旦木原乡 + 沙漠营地银河</li>
+        <li>赶上 10/4 周日牛羊大巴扎</li>
+        <li>9 月底正是帕米尔黄金窗口尾巴</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <span class="tagline alt">方案 B · 备选</span>
+      <h3 style="margin-top:0">温宿大峡谷 + 克孜尔石窟 + 胡杨</h3>
+      <ul>
+        <li>总里程 +900km，车程强度约一倍</li>
+        <li>错过 10/4 周日牛羊大巴扎</li>
+        <li>轮台胡杨最佳期 10/15—11/5，10 月初未全黄</li>
+        <li>适合不怕坐车、执念峡谷石窟的队伍</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    2026 南疆之旅 · 行程规划基于本地攻略与 44 篇小红书实地笔记交叉验证 ·
+    笔记要点详见 <a href="./xhs.html">小红书笔记总结</a>
+  </div>
+</footer>
+
+</body>
+</html>

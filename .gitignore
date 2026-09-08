@@ -1,0 +1,19 @@
+# 浏览器登录态与用户数据（含 Cookie，严禁入库）
+tools/xhs/profile/
+tools/xhs/chrome-profile/
+
+# 抓取中间产物（含访问令牌/页面原始状态）
+tools/xhs/state.json
+tools/xhs/board_api*.json
+tools/xhs/tokens_*.json
+tools/xhs/token_queue.json
+tools/xhs/net_log.json
+tools/xhs/*.png
+
+# Node
+node_modules/
+package-lock.json
+
+# 系统
+.DS_Store
+*.log

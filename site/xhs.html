@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小红书笔记总结 · 2026 南疆之旅</title>
+<meta name="description" content="44 篇小红书实地笔记（塔县 26 + 喀什 18）的主题化总结：边防证、托格伦夏村、盘龙古道争议、白沙湖攻略、星空、美食与住宿。">
+<style>
+:root{
+  --bg:#FAF9F7; --card:#FFFFFF; --border:#E8E4DE; --border-2:#D6D0C8;
+  --text:#1C1917; --text-2:#57534E; --text-3:#8A817A;
+  --primary:#C2410C; --primary-deep:#9A3412; --primary-soft:#FDF1E9;
+  --blue:#1D4ED8; --blue-soft:#EFF4FE;
+  --green:#15803D; --green-soft:#F0FDF4;
+  --red:#B91C1C; --red-soft:#FEF2F2;
+  --r:12px; --r-lg:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+.serif{font-family:"Songti SC","STSong","Noto Serif SC","SimSun",serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+.nav{border-bottom:1px solid var(--border);background:rgba(250,249,247,.92);backdrop-filter:blur(8px);position:sticky;top:0;z-index:50}
+.nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{font-weight:700;font-size:16px}
+.nav-brand em{color:var(--primary);font-style:normal}
+.nav-links{display:flex;gap:8px}
+.nav-links a{color:var(--text-2);text-decoration:none;font-size:14px;padding:8px 16px;border-radius:8px;transition:all .15s ease-out}
+.nav-links a:hover{color:var(--text);background:#F1EEE9}
+.nav-links a.active{color:var(--primary);font-weight:600}
+
+.hero{padding:72px 0 40px;text-align:center}
+.hero .kicker{color:var(--primary);font-weight:600;font-size:14px;letter-spacing:.24em;margin-bottom:16px}
+.hero h1{font-size:40px;line-height:1.25;font-weight:700;letter-spacing:.04em}
+.hero .sub{color:var(--text-2);margin-top:16px}
+.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:40px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px 32px;min-width:128px}
+.stat b{display:block;font-size:24px;font-weight:700}
+.stat small{color:var(--text-3);font-size:12.5px}
+
+.alert{margin:8px 0 56px;background:var(--red-soft);border:1px solid #FECACA;border-left:4px solid var(--red);border-radius:var(--r);padding:24px 32px}
+.alert h3{font-size:17px;color:var(--red);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.alert p{font-size:14.5px;color:#7F1D1D}
+.alert b{color:var(--red)}
+
+.section{padding:48px 0 8px}
+.section-head{display:flex;align-items:baseline;gap:16px;margin-bottom:32px}
+.section-head h2{font-size:26px;font-weight:700;letter-spacing:.04em}
+.section-head .line{flex:1;height:1px;background:var(--border-2)}
+.section-head .no{color:var(--text-3);font-size:14px;font-family:Georgia,serif}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px}
+.grid .span2{grid-column:span 2}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px;display:flex;flex-direction:column;transition:box-shadow .15s ease-out}
+.card:hover{box-shadow:0 8px 24px rgba(28,25,23,.06)}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:8px}
+.card h3{font-size:16.5px;font-weight:700;line-height:1.4}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.chip{font-size:11.5px;font-weight:600;border-radius:99px;padding:1px 10px;white-space:nowrap}
+.chip.taxian{color:#9A3412;background:var(--primary-soft)}
+.chip.kashi{color:#1E40AF;background:var(--blue-soft)}
+.chip.heat{color:var(--green);background:var(--green-soft)}
+.card ul{list-style:none}
+.card li{padding-left:20px;position:relative;color:var(--text-2);font-size:13.5px;margin-top:6px}
+.card li::before{content:"·";position:absolute;left:6px;font-weight:900;color:var(--primary)}
+.card li b{color:var(--text)}
+.card .verdict{margin-top:auto;padding-top:12px;font-size:13px;color:var(--primary-deep);font-weight:600;border-top:1px dashed var(--border)}
+.quote{background:#F7F5F1;border-radius:8px;padding:8px 12px;font-size:13px;color:var(--text-2);margin-top:8px}
+.quote::before{content:"「";color:var(--text-3)}
+.quote::after{content:"」";color:var(--text-3)}
+
+.vs-box{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.vs-col{border-radius:8px;padding:12px 16px;font-size:13px}
+.vs-col.good{background:var(--green-soft);color:#14532D}
+.vs-col.bad{background:var(--red-soft);color:#7F1D1D}
+.vs-col b{display:block;font-size:12px;letter-spacing:.1em;margin-bottom:4px;opacity:.8}
+
+footer{border-top:1px solid var(--border);margin-top:48px;padding:32px 0 48px;color:var(--text-3);font-size:13px;text-align:center}
+footer a{color:var(--text-2)}
+
+@media (max-width:880px){
+  .hero h1{font-size:30px}
+  .grid{grid-template-columns:1fr}
+  .grid .span2{grid-column:span 1}
+  .vs-box{grid-template-columns:1fr}
+  .stats{gap:8px}.stat{padding:12px 20px;min-width:104px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-inner">
+  <div class="nav-brand serif">2026<em>南疆之旅</em> · 笔记总结</div>
+  <div class="nav-links">
+    <a href="./index.html">行程路线</a>
+    <a class="active" href="./xhs.html">小红书笔记总结</a>
+  </div>
+</div></nav>
+
+<header class="hero wrap">
+  <div class="kicker">XIAOHONGSHU DIGEST</div>
+  <h1 class="serif">44 篇实地笔记，一次读完。</h1>
+  <p class="sub">个人收藏专辑的主题化提炼 · 全部来自旅行者一手经验</p>
+  <div class="stats">
+    <div class="stat"><b>44 篇</b><small>笔记总量</small></div>
+    <div class="stat"><b>26 篇</b><small>塔县 · 帕米尔专辑</small></div>
+    <div class="stat"><b>18 篇</b><small>喀什专辑</small></div>
+    <div class="stat"><b>11 类</b><small>主题结论</small></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="alert">
+    <h3>⚠️ 全站最重要的一条 · 边防证填写</h3>
+    <p>前往地必须同时包含 <b>「喀什地区」＋「克州地区」</b>——白沙湖、喀拉库勒湖、木吉火山口实际位于<b>克州阿克陶县</b>，只写塔县可能被检查站拦下。「国家移民管理局 12367」APP 可在线办理，网友实测秒批，提前 1—2 天即可；人手一张，缺一不可。</p>
+  </div>
+</div>
+
+<section class="section wrap">
+  <div class="section-head"><span class="no">01</span><h2 class="serif">帕米尔 · 塔县</h2><div class="line"></div></div>
+  <div class="grid">
+
+    <div class="card span2">
+      <div class="card-top">
+        <h3>托格伦夏村 —— 被提及最多的宝藏村庄</h3>
+        <div class="chips"><span class="chip taxian">塔县</span><span class="chip heat">7 篇提及</span></div>
+      </div>
+      <ul>
+        <li>塔县城区<b>对面山脚下，骑行/驾车约 20—30 分钟</b>；非景区、<b>免门票</b>，野趣十足</li>
+        <li>机位：进村前马路边<b>白色小桥</b> + 毡房群观景台；村中湿地牧场可近距离拍牦牛、羊群</li>
+        <li>村民好客：塔吉克<b>家访</b>喝茶拍照、小孩牵马合影约 30 元；凉亭有卖酸奶的小女孩</li>
+        <li>早晨看<b>日照金山</b>（约 07:30，几率几乎天天 99%），晚上拍星空；最佳拍照时段 <b>20:00—21:00 羊群归来</b>，暖黄柔光</li>
+        <li>有民宿可住（肖贡尼牧家乐等），早餐馕+鸡蛋+奶茶，晚饭可预定抓饭</li>
+      </ul>
+      <div class="verdict">结论：比禾木更安静、零商业化的油画村庄——本行程已纳入 D4 盘龙古道的 Plan B 替代线。</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3>塔合曼湿地 + 树洞公路</h3>
+        <div class="chips"><span class="chip taxian">塔县</span><span class="chip heat">5 篇提及</span></div>
+      </div>
+      <ul>
+        <li>G314 国道旁观景台远眺，<b>深秋染成暖金色</b>、溪流如银带</li>
+        <li>树洞公路：旱柳枝桠遮天；主干道车多时<b>往塔合曼乡里开，有无人版</b></li>
+        <li>拜什库尔干村路边全是野生沙棘树，可开到湿地边缘</li>
+      </ul>
+      <div class="verdict">结论：G314 必停站，本行程 D4 返程顺路打卡。</div>
+    </div>
+
+    <div class="card span2">
+      <div class="card-top">
+        <h3>盘龙古道 · 木吉火山口 · 帕米尔之眼 —— 争议景点怎么选</h3>
+        <div class="chips"><span class="chip taxian">塔县</span><span class="chip heat">8 篇提及</span></div>
+      </div>
+      <div class="vs-box">
+        <div class="vs-col good"><b>支持的看</b>600 道弯气势震撼；「今日走过人生所有弯路，从此人生尽是坦途」；小盘龙出片</div>
+        <div class="vs-col bad"><b>劝退的看</b>机位照片千篇一律、极易晕车、不在任何必经之路上；封路管制随时发生</div>
+      </div>
+      <ul>
+        <li><b>木吉火山口/帕米尔之眼</b>：风景确美（18 罗汉峰、泥火山），但白沙湖北岸往返多绕 <b>150km+ / 3 小时</b>——多笔记明确劝退「时间紧就舍弃」；塔县→班迪尔蓝湖段施工搓板路，轿车慎行</li>
+        <li>「木吉之眼」有笔记直言网图 P 出的压迫感 + 路烂到怀疑人生</li>
+        <li>若执意去木吉：第一晚住白沙湖/布伦口，行程拉长到 4 天以上，20 点后入园免门票</li>
+      </ul>
+      <div class="verdict">结论：本行程默认放弃木吉；盘龙古道保留主线路 + 托格伦夏村 Plan B 双保险。</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3>白沙湖 · 喀拉库勒湖实战攻略</h3>
+        <div class="chips"><span class="chip taxian">塔县</span><span class="chip heat">7 篇提及</span></div>
+      </div>
+      <ul>
+        <li><b>北岸免费</b>、人少、俯瞰视角；<b>南岸收费</b>可下湖边拍牦牛（可讲价）</li>
+        <li><b>一定要上午去</b>：中午前天晴无风最出片，下午起风浪大没法拍</li>
+        <li>可免费领「勇士证书」；最火机位其实在<b>返程路上</b>（需晴天+长焦）</li>
+        <li>喀拉库勒湖主要看慕士塔格同框倒影，打卡即可</li>
+      </ul>
+      <div class="verdict">结论：本行程 D3 安排上午北岸，符合全部笔记的最优解。</div>
+    </div>
+
+    <div class="card span2">
+      <div class="card-top">
+        <h3>星空 · 日照金山 · 黄金窗口</h3>
+        <div class="chips"><span class="chip taxian">塔县</span><span class="chip heat">6 篇提及</span></div>
+      </div>
+      <ul>
+        <li>塔县看银河不用熬夜：<b>早上 6:00—8:00</b> 是银河+流星窗口，肉眼震撼，手机三脚架+夜景 30 秒即可出片</li>
+        <li>县城光害略高，沿国道往南找雪山当前景；营地（3200m 无光污染）条件更好</li>
+        <li><b>9/15—9/30 是塔县最后的黄金窗口</b>：金草滩全黄 + 慕士塔格初雪 + 人最少；10 月后冰川公园关门、盘龙随时封路、气温零下</li>
+        <li>金草滩附近有<b>免费观景点</b>（围栏门没锁，推开进），360° 雪山环绕，日照金山、水上雾凇一次集齐</li>
+        <li>羽绒服必带：9 月夜里已近零度，一天过四季</li>
+      </ul>
+      <div class="verdict">结论：9/29 上山正踩黄金窗口尾巴，行程已按此设计。</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3>塔县吃住参考</h3>
+        <div class="chips"><span class="chip taxian">塔县</span><span class="chip heat">5 篇提及</span></div>
+      </div>
+      <ul>
+        <li>酒店口碑：<b>全景星空</b>（隔音较好、门口看日照金山）/ <b>东寻文化</b>（有身体乳、塔吉克家访）</li>
+        <li><b>抖音直播间常比美团/去哪儿便宜</b>，多平台比价、抖音要早订</li>
+        <li>吃：古老戈壁餐厅（烤串原味、大盘鸡，等位 40 分钟）；过油肉拌面去古老胡杨餐厅</li>
+        <li>奶皮子酸奶配核桃馕＝贝果口感；「卡特拉玛」值得专门吃；白沙湖冷水狗鱼野生靠运气</li>
+        <li>巴铁夜市逛开眼就好，贵的别入手</li>
+      </ul>
+      <div class="verdict">结论：已写入 D3 晚餐与住宿候选。</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="section-head"><span class="no">02</span><h2 class="serif">喀什及周边</h2><div class="line"></div></div>
+  <div class="grid">
+
+    <div class="card span2">
+      <div class="card-top">
+        <h3>古城错峰玩法 · 机位全图鉴</h3>
+        <div class="chips"><span class="chip kashi">喀什</span><span class="chip heat">6 篇提及</span></div>
+      </div>
+      <ul>
+        <li><b>反向错峰</b>：大批游客 10:30 从东门涌入东区——我们<b>西区先拍（安静出片）→ 东区后逛（购物完直接回民宿）</b></li>
+        <li>西区：<b>彩虹巷、布袋巷</b>相邻必打卡，旅拍性价比更高、女摄多</li>
+        <li>免费全景机位：<b>丽呈酒店观光电梯 10—11 楼</b>、<b>Atlas Farmer 3 楼露台</b>（都能拍昆仑塔）</li>
+        <li>耿公祠高处拍全景；导航「那时慢民宿」走到巷子顶是昆仑塔机位；开城仪式前可顺手打完这两个点</li>
+        <li>开城仪式站<b>马路对面</b>视角才正；「古丽的家」约 30 元喝茶看演出歇脚</li>
+        <li>艾提尕尔清真寺外观即可（门票可省）；亚瓦格古老凉粉凉皮（总店）好评</li>
+      </ul>
+      <div class="verdict">结论：D2 全天已按此路线编排。</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3>布料市场 · 定制艾德莱斯</h3>
+        <div class="chips"><span class="chip kashi">喀什</span><span class="chip heat">3 篇提及</span></div>
+      </div>
+      <ul>
+        <li>市场二楼找裁缝，<b>多数要 7—10 天</b>，很少能隔天取</li>
+        <li>参考价：3 米布 45 元 + 手工 140 元（+包/发圈 20 元可讲价）</li>
+        <li>避雷：已读不回、拖工期多是语言沟通不畅+旺季爆单——<b>细节当面说清、带款式图</b></li>
+        <li>面料：常见款偏化纤适合拍照，长期穿选棉质，预算足上真丝</li>
+      </ul>
+      <div class="verdict">结论：D2 下单 → D9 取，行程完美闭环。</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3>周日牛羊大巴扎 + 婚礼</h3>
+        <div class="chips"><span class="chip kashi">喀什</span><span class="chip heat">4 篇提及</span></div>
+      </div>
+      <ul>
+        <li><b>仅周日开放</b>；赶早最热闹，10 点后人渐散</li>
+        <li>主角是麦盖提<b>刀郎羊</b>：垂耳兔耳朵、老成长脸，蜜汁萌</li>
+        <li>交易区尘土飞扬<b>戴口罩</b>；杏皮茶、石榴汁、干果比市区便宜</li>
+        <li>骑仕大观园二楼可围观维吾尔婚礼（达瓦孜表演）；<b>提前打电话问当日有没有婚礼</b></li>
+      </ul>
+      <div class="verdict">结论：特意把 D8 留在周日。</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3>香妃园 · 高台民居</h3>
+        <div class="chips"><span class="chip kashi">喀什</span><span class="chip heat">3 篇提及</span></div>
+      </div>
+      <ul>
+        <li>香妃园网购票约 <b>38 元</b>，主墓殿「小泰姬陵」很出片；<b>精华＝主建筑 + 高低寺</b>，其余人造快速略过</li>
+        <li>旅行团多，门口蹭讲解即可</li>
+        <li>高台民居修缮中视开放情况；开放务必走到<b>最里侧遗址群「小庞贝」</b></li>
+      </ul>
+      <div class="verdict">结论：已写入 D8 / D2 / D9 安排。</div>
+    </div>
+
+    <div class="card span2">
+      <div class="card-top">
+        <h3>飞机选座玄学（实测有效）</h3>
+        <div class="chips"><span class="chip kashi">喀什</span><span class="chip heat">2 篇提及</span></div>
+      </div>
+      <ul>
+        <li><b>内地 → 喀什：左侧靠窗 A/L 座</b>，落地前半小时雪山全程高光；右侧全是荒地别浪费</li>
+        <li><b>喀什 → 内地：右侧 L 座</b>，起飞不久近距离看雪山，冬季早班机有机会日月同辉</li>
+        <li>空客 319：<b>首选 42—44 排</b>（带一点机翼构图），次选 45—46；<b>避雷 36—40（完全遮挡）和 48—49（吵+颠）</b></li>
+        <li>好位置秒空，<b>一定提前值机</b></li>
+      </ul>
+      <div class="verdict">结论：D1 / D10 选座贴士已加入行程。</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3>时令提醒 · 胡杨窗口</h3>
+        <div class="chips"><span class="chip kashi">喀什</span></div>
+      </div>
+      <ul>
+        <li>轮台塔里木胡杨最佳期 <b>10/15—11/5</b>，10 月初黄绿相间未全黄</li>
+        <li>慕士塔格冰川公园 <b>10 月中下旬关门</b>，9 月底是末班车</li>
+        <li>木垒/罗布人村寨胡杨都要 10 月中以后</li>
+      </ul>
+      <div class="verdict">结论：想看金胡杨应推迟到 10 月中下旬，或放弃东线备选。</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="section-head"><span class="no">03</span><h2 class="serif">行程交叉验证</h2><div class="line"></div></div>
+  <div class="grid">
+    <div class="card span2">
+      <div class="card-top">
+        <h3>一篇与我们框架几乎一致的 9 天行程（9/27—10/5）</h3>
+        <div class="chips"><span class="chip taxian">塔县</span><span class="chip kashi">喀什</span><span class="chip heat">交叉验证</span></div>
+      </div>
+      <ul>
+        <li>同为 9/27 抵达、10/5 返程，主线：喀什 → 布伦口 → 塔县（2 晚）→ 莎车 → N39 → 喀什机场，预计自驾 1360km</li>
+        <li>同样放弃：阿图什天门、西极、红其拉甫、不周山营地（时间有限+怕多日高反）</li>
+        <li>他们的实操细节：边防证 12367 办（勾塔县+阿克陶）；N39 自家车跟营地车进、次日不等 11 点班车直接出来</li>
+        <li>装备：提前买红景天、大氧气袋和布洛芬；喀什佰汇亿达可租氧气瓶</li>
+      </ul>
+      <div class="verdict">结论：网友实测同框架可行；细节已合并进 04/05/06 文档。</div>
+    </div>
+    <div class="card">
+      <div class="card-top">
+        <h3>高频关键词</h3>
+        <div class="chips"><span class="chip heat">44 篇词频</span></div>
+      </div>
+      <ul>
+        <li><b>白沙湖</b> · 北岸免费上午去（7+ 篇）</li>
+        <li><b>托格伦夏村</b> · 免门票塔吉克村庄（7 篇）</li>
+        <li><b>边防证</b> · 喀什+克州双地区（多篇强调）</li>
+        <li><b>盘龙古道</b> · 争议最大（8 篇两极）</li>
+        <li><b>错峰</b> · 古城西→东反向逛（多篇共识）</li>
+        <li><b>银河</b> · 早上 6—8 点窗口（3 篇）</li>
+      </ul>
+      <div class="verdict">全部已反映进行程设计。</div>
+    </div>
+  </div>
+  <div class="quote" style="margin:0 0 48px">帕米尔啊，这个时节，整个北疆在你面前都是弟弟。</div>
+</section>
+
+<footer>
+  <div class="wrap">
+    数据来源：个人小红书收藏专辑 44 篇笔记（2026-09 抓取汇总） ·
+    完整行程见 <a href="./index.html">行程路线总览</a>
+  </div>
+</footer>
+
+</body>
+</html>
