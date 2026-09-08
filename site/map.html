@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>路线走向图 · 2026 南疆之旅</title>
+<meta name="description" content="2026 南疆之旅路线走向示意图：喀什往返，G314 帕米尔往返段 + 莎车—麦盖提三角环线。">
+<style>
+:root{
+  --bg:#FAF9F7; --card:#FFFFFF; --border:#E8E4DE; --border-2:#D6D0C8;
+  --text:#1C1917; --text-2:#57534E; --text-3:#8A817A;
+  --primary:#C2410C; --primary-soft:#FDF1E9;
+  --blue:#1D4ED8; --blue-soft:#EFF4FE;
+  --green:#15803D; --green-soft:#F0FDF4;
+  --r:12px; --r-lg:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Songti SC","STSong","Noto Serif SC","SimSun",serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.nav{border-bottom:1px solid var(--border);background:rgba(250,249,247,.92);backdrop-filter:blur(8px);position:sticky;top:0;z-index:50}
+.nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{font-weight:700;font-size:16px}
+.nav-brand em{color:var(--primary);font-style:normal}
+.nav-links{display:flex;gap:8px}
+.nav-links a{color:var(--text-2);text-decoration:none;font-size:14px;padding:8px 16px;border-radius:8px;transition:all .15s ease-out}
+.nav-links a:hover{color:var(--text);background:#F1EEE9}
+.nav-links a.active{color:var(--primary);font-weight:600}
+.hero{padding:56px 0 32px;text-align:center}
+.hero .kicker{color:var(--primary);font-weight:600;font-size:14px;letter-spacing:.24em;margin-bottom:16px}
+.hero h1{font-size:36px;font-weight:700;letter-spacing:.04em}
+.hero .sub{color:var(--text-2);margin-top:12px}
+.map-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px;margin-bottom:24px}
+svg{width:100%;height:auto;display:block}
+.legend{display:flex;flex-wrap:wrap;gap:24px;padding:16px 8px 4px;border-top:1px dashed var(--border);margin-top:16px;font-size:13px;color:var(--text-2)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.sw{display:inline-block;width:32px;height:0;border-top:3px solid var(--primary);border-radius:2px}
+.sw.dash{border-top-style:dashed}
+.sw.green{border-top-color:var(--green)}
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px}
+.note{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px}
+.note h3{font-size:15.5px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.note h3 .no{display:inline-flex;width:24px;height:24px;border-radius:50%;background:var(--primary-soft);color:var(--primary);font-size:12.5px;font-weight:700;align-items:center;justify-content:center}
+.note p{color:var(--text-2);font-size:13.5px}
+footer{border-top:1px solid var(--border);margin-top:16px;padding:32px 0 48px;color:var(--text-3);font-size:13px;text-align:center}
+footer a{color:var(--text-2)}
+@media (max-width:880px){.notes{grid-template-columns:1fr}.hero h1{font-size:28px}}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-inner">
+  <div class="nav-brand serif">2026<em>南疆之旅</em> · 路线走向</div>
+  <div class="nav-links">
+    <a href="./index.html">行程路线</a>
+    <a class="active" href="./map.html">路线地图</a>
+    <a href="./xhs.html">小红书笔记总结</a>
+  </div>
+</div></nav>
+
+<header class="hero wrap">
+  <div class="kicker">ROUTE OVERVIEW</div>
+  <h1 class="serif">一条往返 + 一个环线</h1>
+  <p class="sub">喀什出发 · 帕米尔往返段（G314）+ 莎车—麦盖提—喀什三角环线 · 全程约 1200km</p>
+</header>
+
+<main class="wrap">
+  <div class="map-card">
+    <svg viewBox="0 0 1000 700" role="img" aria-label="南疆之旅路线走向示意图">
+      <defs>
+        <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/>
+        </marker>
+      </defs>
+
+      <!-- 装饰：帕米尔山脉 -->
+      <g fill="#F0EDE7" stroke="#E2DCD2" stroke-width="1">
+        <path d="M8 660 L48 585 L88 660 Z"/>
+        <path d="M60 660 L110 555 L160 660 Z"/>
+        <path d="M0 540 L38 480 L76 540 Z"/>
+        <path d="M30 420 L80 335 L130 420 Z"/>
+        <path d="M120 300 L165 235 L210 300 Z"/>
+      </g>
+      <text x="118" y="452" font-size="13" fill="#B8AFA5" letter-spacing="4">帕米尔高原 PAMIR</text>
+
+      <!-- 装饰：塔克拉玛干沙漠 -->
+      <g fill="none" stroke="#EADFC9" stroke-width="2.5" stroke-linecap="round">
+        <path d="M770 150 q 35 -20 70 0"/>
+        <path d="M840 170 q 30 -16 60 0"/>
+        <path d="M800 190 q 35 -18 70 0"/>
+        <path d="M870 130 q 26 -14 52 0"/>
+      </g>
+      <text x="800" y="215" font-size="13" fill="#C9B98F" letter-spacing="3">塔克拉玛干 TAKLAMAKAN</text>
+
+      <!-- 湖泊 -->
+      <ellipse cx="146" cy="340" rx="26" ry="9" fill="#BFDBFE" opacity=".85"/>
+      <ellipse cx="122" cy="428" rx="19" ry="13" fill="#93C5FD" opacity=".8"/>
+
+      <!-- 指北针 -->
+      <g transform="translate(944,52)" stroke="#8A817A" fill="#8A817A">
+        <line x1="0" y1="18" x2="0" y2="-14" stroke-width="1.5"/>
+        <path d="M0 -20 L5 -6 L0 -10 L-5 -6 Z" stroke="none"/>
+        <text x="0" y="34" font-size="12" text-anchor="middle" stroke="none">N</text>
+      </g>
+
+      <!-- ✦ G314 帕米尔往返段（D3 上 / D4 下） -->
+      <path d="M 366 191
+               C 330 205 308 232 295 255
+               C 265 283 185 300 140 330
+               C 122 358 116 388 128 415
+               C 132 462 148 528 191 582"
+            fill="none" stroke="#C2410C" stroke-width="3.5" stroke-dasharray="10 7"
+            stroke-linecap="round" marker-mid="url(#arr)"/>
+      <!-- 方向箭头（成对：上山/下山） -->
+      <path d="M 268 287 l -11 8 l 5 6 z" fill="#C2410C"/>
+      <path d="M 158 352 l 11 -8 l -5 -6 z" fill="#C2410C"/>
+      <path d="M 124 470 l 9 -9 l 5 6 z" fill="#C2410C"/>
+      <path d="M 176 548 l -9 9 l -5 -6 z" fill="#C2410C"/>
+      <g font-size="12.5" fill="#9A3412" font-weight="600">
+        <text x="236" y="278">G314 中巴公路 · 290km</text>
+        <text x="236" y="294" font-weight="400" fill="#B8AFA5">D3 上山 ↓ · D4 下山 ↑（唯一走廊，两趟停留点不同）</text>
+      </g>
+
+      <!-- 盘龙古道小环 -->
+      <path d="M 191 582 C 232 570 254 546 236 524 C 220 504 194 520 202 542"
+            fill="none" stroke="#C2410C" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="248" y="520" font-size="11.5" fill="#9A3412" font-weight="600">盘龙古道 600 弯</text>
+      <text x="248" y="535" font-size="11" fill="#B8AFA5">晕车替代 → 托格伦夏村</text>
+
+      <!-- ✦ D5 喀什 → 莎车 -->
+      <path d="M 366 191 C 480 210 560 280 655 432"
+            fill="none" stroke="#C2410C" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arr)"/>
+      <text x="470" y="252" font-size="12.5" fill="#9A3412" font-weight="600">D5 · G3012 高速 190km</text>
+
+      <!-- ✦ D6 莎车 → 麦盖提 → N39 -->
+      <path d="M 655 432 C 690 390 720 355 747 317 C 770 290 792 265 816 241"
+            fill="none" stroke="#C2410C" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arr)"/>
+      <text x="700" y="404" font-size="12.5" fill="#9A3412" font-weight="600" transform="rotate(-52 700 404)">D6 · 150km</text>
+
+      <!-- ✦ D7 N39 → 喀什 -->
+      <path d="M 816 241 C 700 160 540 150 366 191"
+            fill="none" stroke="#C2410C" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arr)"/>
+      <text x="560" y="152" font-size="12.5" fill="#9A3412" font-weight="600">D7 · 喀麦高速 200km</text>
+
+      <!-- 途经点 -->
+      <g font-size="11.5" fill="#8A817A">
+        <circle cx="295" cy="255" r="4.5" fill="#fff" stroke="#D6D0C8" stroke-width="2"/>
+        <text x="305" y="250">奥依塔克红山谷</text>
+        <circle cx="140" cy="330" r="5" fill="#fff" stroke="#93C5FD" stroke-width="2.5"/>
+        <text x="30" y="322" font-weight="600" fill="#57534E">白沙湖</text>
+        <text x="30" y="336">北岸免费</text>
+        <circle cx="128" cy="415" r="5" fill="#fff" stroke="#93C5FD" stroke-width="2.5"/>
+        <text x="18" y="452" font-weight="600" fill="#57534E">喀拉库勒湖</text>
+        <text x="18" y="466">慕士塔格倒影</text>
+        <circle cx="150" cy="505" r="4.5" fill="#fff" stroke="#D6D0C8" stroke-width="2"/>
+        <text x="20" y="530" font-weight="600" fill="#57534E">塔合曼湿地</text>
+        <text x="20" y="544">树洞公路</text>
+        <circle cx="747" cy="317" r="5" fill="#fff" stroke="#D6D0C8" stroke-width="2"/>
+        <text x="735" y="342">麦盖提 · 刀郎烤鱼</text>
+      </g>
+
+      <!-- 城市节点 -->
+      <g>
+        <!-- 塔县 -->
+        <circle cx="191" cy="582" r="9" fill="#fff" stroke="#C2410C" stroke-width="3"/>
+        <text x="210" y="580" font-size="15" font-weight="700" fill="#1C1917">塔县</text>
+        <text x="210" y="597" font-size="11.5" fill="#8A817A">宿 1 晚 · 3100m · D3—D4</text>
+
+        <!-- 莎车 -->
+        <circle cx="655" cy="432" r="9" fill="#fff" stroke="#C2410C" stroke-width="3"/>
+        <text x="620" y="462" font-size="15" font-weight="700" fill="#1C1917">莎车</text>
+        <text x="596" y="479" font-size="11.5" fill="#8A817A">宿 1 晚 · 木卡姆 + 巴旦木</text>
+
+        <!-- N39 -->
+        <circle cx="816" cy="241" r="9" fill="#fff" stroke="#C2410C" stroke-width="3"/>
+        <text x="716" y="228" font-size="15" font-weight="700" fill="#1C1917">N39 沙漠营地</text>
+        <text x="716" y="245" font-size="11.5" fill="#8A817A">宿 1 晚 · 冲沙 + 银河</text>
+
+        <!-- 喀什（枢纽） -->
+        <circle cx="366" cy="191" r="14" fill="#FDF1E9" stroke="#C2410C" stroke-width="3"/>
+        <circle cx="366" cy="191" r="5" fill="#C2410C"/>
+        <text x="330" y="128" font-size="17" font-weight="800" fill="#1C1917">喀什</text>
+        <text x="286" y="145" font-size="11.5" fill="#8A817A">宿 6 晚 · 大本营（D1 D2 D4 D7 D8 D9）</text>
+        <text x="404" y="180" font-size="11" fill="#B8AFA5">✈️ 机场 · 进出枢纽</text>
+      </g>
+    </svg>
+
+    <div class="legend">
+      <span><span class="sw dash"></span>G314 往返段（D3 上 / D4 下，约 290km）</span>
+      <span><span class="sw"></span>单向环线（D5 → D6 → D7，无重复）</span>
+      <span>◯ 途经打卡点　<bold style="font-weight:700">●</bold> 住宿城市</span>
+    </div>
+  </div>
+
+  <div class="notes">
+    <div class="note">
+      <h3><span class="no">1</span>一条「往返」</h3>
+      <p>喀什 ↔ 塔县的 G314 中巴公路约 290km 走两遍（D3 上、D4 下）——塔县是走廊死胡同，这是唯一通道。两趟停留点错开：上山玩白沙湖/喀湖（顺光），下山玩塔合曼湿地/树洞公路，重复感不强。</p>
+    </div>
+    <div class="note">
+      <h3><span class="no">2</span>一个「三角环线」</h3>
+      <p>喀什 → 莎车（G3012）→ 麦盖提 N39 → 喀什（喀麦高速），D5—D7 共 540km 完全不重复。加上往返段，全程约 1200km，最长单日仅 D4 的 410km。</p>
+    </div>
+    <div class="note">
+      <h3><span class="no">3</span>节奏设计</h3>
+      <p>先人文（喀什 2 晚）→ 上高原前适应海拔 → 塔县只睡 1 晚即回低海拔 → 国庆日已在莎车错峰 → 沙漠收官回喀什还车，最后 2 天纯市内休整购物。</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">示意图 · 方位与距离近似，实际以导航为准 ·
+    完整行程见 <a href="./index.html">行程路线总览</a> ·
+    攻略来源 <a href="./xhs.html">小红书笔记总结</a></div>
+</footer>
+
+</body>
+</html>
