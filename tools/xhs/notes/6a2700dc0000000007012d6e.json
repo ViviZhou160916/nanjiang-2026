@@ -12,5 +12,66 @@
     "#高台民居"
   ],
   "author": "小懂哥",
-  "date": "06-09"
+  "date": "06-09",
+  "comments": [
+    {
+      "user": "",
+      "content": "丽呈酒店免费上吗[害羞R]",
+      "likes": "2",
+      "ip": "上海",
+      "time": "+058406-06",
+      "sub_count": "3",
+      "subs": [
+        {
+          "user": "",
+          "content": "免费[偷笑R]",
+          "likes": "1",
+          "ip": "新疆"
+        }
+      ]
+    },
+    {
+      "user": "",
+      "content": "请问图1在哪里拍的呀，老刷到这张",
+      "likes": "0",
+      "ip": "广东",
+      "time": "+058421-08",
+      "sub_count": "2",
+      "subs": [
+        {
+          "user": "",
+          "content": "高台民居 入口处 免费的",
+          "likes": "0",
+          "ip": "新疆"
+        }
+      ]
+    },
+    {
+      "user": "",
+      "content": "我偷两张发我的朋友圈[doge]",
+      "likes": "0",
+      "ip": "新疆",
+      "time": "+058477-01",
+      "sub_count": "2",
+      "subs": [
+        {
+          "user": "",
+          "content": "好的[doge]新疆游客都到这么晚",
+          "likes": "0",
+          "ip": "浙江"
+        }
+      ]
+    },
+    {
+      "user": "",
+      "content": "小哥哥，来喀什欢迎来我们家拍照打卡",
+      "likes": "0",
+      "ip": "新疆",
+      "time": "+058420-09",
+      "sub_count": "0",
+      "subs": []
+    }
+  ],
+  "comment_count": 4,
+  "comments_scraped_at": "2026-09-09"
 }

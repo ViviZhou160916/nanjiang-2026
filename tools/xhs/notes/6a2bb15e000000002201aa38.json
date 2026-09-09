@@ -16,5 +16,86 @@
     "#南疆自驾"
   ],
   "author": "小红薯6A824969",
-  "date": "编辑于 06-12"
+  "date": "编辑于 06-12",
+  "comments": [
+    {
+      "user": "",
+      "content": "火山口",
+      "likes": "0",
+      "ip": "安徽",
+      "time": "+058509-05",
+      "sub_count": "1",
+      "subs": [
+        {
+          "user": "",
+          "content": "",
+          "likes": "0",
+          "ip": "新疆"
+        }
+      ]
+    },
+    {
+      "user": "",
+      "content": "火山口",
+      "likes": "0",
+      "ip": "江苏",
+      "time": "+058415-08",
+      "sub_count": "1",
+      "subs": [
+        {
+          "user": "",
+          "content": "对",
+          "likes": "0",
+          "ip": "新疆"
+        }
+      ]
+    },
+    {
+      "user": "",
+      "content": "火山口",
+      "likes": "0",
+      "ip": "天津",
+      "time": "+058560-08",
+      "sub_count": "0",
+      "subs": []
+    },
+    {
+      "user": "",
+      "content": "火山口",
+      "likes": "0",
+      "ip": "陕西",
+      "time": "+058490-07",
+      "sub_count": "0",
+      "subs": []
+    },
+    {
+      "user": "",
+      "content": "火山口",
+      "likes": "0",
+      "ip": "新疆",
+      "time": "+058456-02",
+      "sub_count": "0",
+      "subs": []
+    },
+    {
+      "user": "",
+      "content": "火山口",
+      "likes": "0",
+      "ip": "上海",
+      "time": "+058437-03",
+      "sub_count": "0",
+      "subs": []
+    },
+    {
+      "user": "",
+      "content": "火山口",
+      "likes": "0",
+      "ip": "广东",
+      "time": "+058416-06",
+      "sub_count": "0",
+      "subs": []
+    }
+  ],
+  "comment_count": 7,
+  "comments_scraped_at": "2026-09-09"
 }

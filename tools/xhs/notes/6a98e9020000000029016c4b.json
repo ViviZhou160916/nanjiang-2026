@@ -12,5 +12,66 @@
     "#自驾线路"
   ],
   "author": "乐呵呵",
-  "date": "5天前 新疆"
+  "date": "5天前 新疆",
+  "comments": [
+    {
+      "user": "",
+      "content": "这是什么小程序呢？",
+      "likes": "0",
+      "ip": "北京",
+      "time": "+058642-05",
+      "sub_count": "2",
+      "subs": [
+        {
+          "user": "",
+          "content": "感谢！[赞R]",
+          "likes": "0",
+          "ip": "北京"
+        }
+      ]
+    },
+    {
+      "user": "",
+      "content": "赞👍🏻",
+      "likes": "0",
+      "ip": "北京",
+      "time": "+058644-12",
+      "sub_count": "0",
+      "subs": []
+    },
+    {
+      "user": "",
+      "content": "小程序名字叫什么呀",
+      "likes": "0",
+      "ip": "重庆",
+      "time": "+058642-12",
+      "sub_count": "1",
+      "subs": [
+        {
+          "user": "",
+          "content": "西域通[飞吻R]",
+          "likes": "0",
+          "ip": "新疆"
+        }
+      ]
+    },
+    {
+      "user": "",
+      "content": "只发图不说明？[笑哭R]",
+      "likes": "0",
+      "ip": "广西",
+      "time": "+058643-01",
+      "sub_count": "1",
+      "subs": [
+        {
+          "user": "",
+          "content": "西域通",
+          "likes": "0",
+          "ip": "新疆"
+        }
+      ]
+    }
+  ],
+  "comment_count": 4,
+  "comments_scraped_at": "2026-09-09"
 }

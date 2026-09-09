@@ -21,5 +21,50 @@
     "作者"
   ],
   "author": "能武兄（环中国旅行版）",
-  "date": "5天前 新疆"
+  "date": "5天前 新疆",
+  "comments": [
+    {
+      "user": "",
+      "content": "陪三张哈哈哈   虽然旅程结束了  博主多更新",
+      "likes": "1",
+      "ip": "贵州",
+      "time": "+058645-11",
+      "sub_count": "1",
+      "subs": [
+        {
+          "user": "",
+          "content": "[赞R][赞R][赞R] 技术杠杠的",
+          "likes": "0",
+          "ip": "新疆"
+        }
+      ]
+    },
+    {
+      "user": "",
+      "content": "木吉火山口没去呀？",
+      "likes": "0",
+      "ip": "上海",
+      "time": "+058654-09",
+      "sub_count": "1",
+      "subs": [
+        {
+          "user": "",
+          "content": "木有[笑哭R]",
+          "likes": "0",
+          "ip": "新疆"
+        }
+      ]
+    },
+    {
+      "user": "",
+      "content": "到喀什 一定不要错过了帕米尔高原",
+      "likes": "0",
+      "ip": "新疆",
+      "time": "+058642-05",
+      "sub_count": "0",
+      "subs": []
+    }
+  ],
+  "comment_count": 3,
+  "comments_scraped_at": "2026-09-09"
 }
